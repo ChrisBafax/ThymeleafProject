@@ -1,0 +1,39 @@
+<!doctype html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <meta content="Mark Otto, Jacob Thornton, and Bootstrap contributors" name="author">
+    <meta content="Hugo 0.104.2" name="generator">
+    <title>Asset Info</title>
+
+    <div th:insert="~{style :: style}"></div>
+</head>
+<body>
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Wallet Info</a>
+        <button aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler position-absolute d-md-none collapsed" data-bs-target="#sidebarMenu"
+                data-bs-toggle="collapse"
+                type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div th:insert="~{navbar-left :: navbar-left}"></div>
+
+            <!-- Main -->
+            <div layout:fragment="main"></div>
+            <!-- Create Crypto -->
+            <div layout:fragment="createCrypto"></div>
+        </div>
+    </div>
+
+    <div th:insert="~{JS :: JS}"></div>
+</body>
+</html>
